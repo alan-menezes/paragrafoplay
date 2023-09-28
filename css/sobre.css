@@ -1,0 +1,72 @@
+/* Estilos base para celular */
+* {
+    margin: 0;
+    padiing: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.bloco {
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background-color: #000;*/
+    color: #fff;
+}
+
+.banner {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../imagens//banner-paragrafoPlay.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: justify;
+}
+
+.banner h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.banner h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cta {
+    margin: 20px;
+}
+
+/* Media query para telas maiores */
+@media (min-width: 768px) {
+    .banner {
+        padding: 80px;
+    }
+
+    .banner h2 {
+        font-size: 36pt;
+    }
+
+    .banner h4 {
+        font-size: 24pt;
+    }
+
+    .banner p {
+        font-size: 18pt;
+    }
+}

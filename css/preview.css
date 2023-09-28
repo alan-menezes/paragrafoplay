@@ -1,0 +1,64 @@
+.paragrafo-bloco {
+    border: 2px solid #38b6ff;
+    border-radius: 5px;
+    padding: 10px;
+    /*margin-bottom: 20px;*/
+    margin: 20px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #38b6ff;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-top: 5px;
+}
+
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.preview img,
+.preview video {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #38b6ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .paragrafo-bloco {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
+

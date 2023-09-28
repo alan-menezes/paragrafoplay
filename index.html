@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<!DOCTYPE html>
+
+<html lang='pt-br'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="description" content="se voce quiser criar videos para web,paragrafoplay é a ferramenta certa" <title>
+    <title>ParágrafoPlay</title>
+    <!--Import Google Icon Font-->
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <!-- Importação do Materialize CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="font" type="font/woff2" href="fontes/open-sans.woff2" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <link rel='stylesheet' type='text/css' href='css/preview.css'>
+</head>
+
+<body>
+    <header class='black'>
+        <nav class='black'>
+            <div class='nav-wrapper container'>
+                <a href='#' class='brand-logo'><img src='imagens/paragrafoplay-logo.png' alt='logotipo ParágrafoPlay'
+                        class='pp-logo' id='pp-logo' width="150" height="150"></a>
+                <a href='#' data-target='mobile-demo' class='sidenav-trigger'><i class='material-icons'>menu</i></a>
+                <ul class='right hide-on-med-and-down'>
+                    <li><a href='paginas/sobre.html' class="lista-menu">Sobre</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class='sidenav' id='mobile-demo'>
+            <li><a href='paginas/sobre.html' class="lista-menu">Sobre</a></li>
+        </ul>
+    </header>
+
+    <main class='container'>
+        <h1 class='center-align'>Criar Seu Vídeo</h1>
+        <form method='post' enctype='multipart/form-data' class='col s12'>
+            <div class='row'>
+                <div class='input-field col s12'>
+                    <input id='tituloVideo' type='text' name='tituloVideo' class='validate'>
+                    <label for='tituloVideo'>Título</label>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='input-field col s12'>
+                    <textarea placeholder="pressione ENTER 2x para gerar um novo paragrafo" id='textoVideo'
+                        class='materialize-textarea' name='textoVideo'></textarea>
+                    <label for='textoVideo'>Texto</label>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='input-field col s12'>
+                    <input type='submit' value='Criar Vídeo' class='btn blue'>
+                </div>
+            </div>
+        </form>
+
+        <div id='paragrafos' class='row'>
+            <!-- Parágrafos e sistema de upload aqui -->
+        </div>
+        <div id="videoPreviewContainer" class="row" style="display: none;">
+            <div class="col s12">
+                <h2 class="center-align">Preview do Vídeo</h2>
+                <div class="video-preview-container center-align">
+                    <video id="videoPreview" controls class="responsive-video"></video>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Importação do Materialize JavaScript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+    <!--biblioteca ffmpeg-->
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg/dist/ffmpeg.min.js"></script>
+    <!--FileSaver-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <!-- Seu próprio JavaScript -->
+    <script src='js/main.js'></script>
+    <script> src = 'js/exportar.js'</script>
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+
+</html>
